@@ -2,6 +2,7 @@ from setuptools import find_packages, setup
 import os
 from glob import glob
 
+
 package_name = 'my_robot_controller'
 
 setup(
@@ -14,7 +15,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/maps', glob('maps/*')),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*')))
-    ],  
+    ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='samiel',
@@ -29,7 +30,8 @@ setup(
             "pose_sub = my_robot_controller.pose_subscriber:main",
             "controller = my_robot_controller.turtle_controller:main",
             "mapping = my_robot_controller.mapping:main",
-            "navigation = my_robot_controller.navigation:main"
+            "navigation = my_robot_controller.navigation:main",
+            "aw_nav = my_robot_controller.aw_navigation:main"
         ],
     },
 )
