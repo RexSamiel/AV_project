@@ -1,0 +1,9 @@
+prefix=/home/samiel/Spaces/ros2_ws/src/my_robot_controller/my_robot_controller
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: CycloneDDS
+Description: Eclipse Cyclone DDS library
+Version: 0.11.0
+Libs: -L${libdir} -lddsc
+Cflags: -I${includedir}
